@@ -150,8 +150,8 @@ function componentFactoryOf() {
     /* checking type of scopedSlots */
     <MyComponent scopedSlots={{ content: p => p }} />;
     <MyComponent scopedSlots={{ content: p => p, unknown: (p: any) => p }} />;
-    <MyComponent scopedSlots={{ content: (p: number) => p.toString() }} />; //// TS2322: 'string' is not assignable
-    <MyComponent scopedSlots={{}} />;           //// TS2322: Property 'content' is missing
+    <MyComponent scopedSlots={{ content: (p: number) => p.toString() }} />;
+    <MyComponent scopedSlots={{}} />;
 
     /* checking type of custom event handler */
     <MyComponent onChange={_v => {}} />;

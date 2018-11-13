@@ -116,8 +116,8 @@ function convert() {
 
     // OK
     <MyComponent2 a="foo" scopedSlots={{ default: props => props.ssprops }} />;
-    // NG
-    <MyComponent2 a="foo" scopedSlots={{}} />;   //// TS2322: 'default' is missing
+    // OK
+    <MyComponent2 a="foo" scopedSlots={{}} />;
     // NG
     <MyComponent2 a="foo" scopedSlots={{ default: props => props.xxx }} />;   //// TS2339: 'xxx' does not exist
 
